@@ -5,29 +5,39 @@
 
 <!--
 In R, factors are used to work with categorical variables, variables that have a fixed and known set of possible values. They are also useful when you want to display character vectors in a non-alphabetical order.-->
+
 * dich doan o tren
 <!--Historically, factors were much easier to work with than characters. As a result, many of the functions in base R automatically convert characters to factors. This means that factors often crop up in places where they're not actually helpful. Fortunately, you don't need to worry about that in the tidyverse, and can focus on situations where factors are genuinely useful. -->
 * dich toan o tren
-### Prerequisites
 
-To work with factors, we'll use the __forcats__ package, which is part of the core tidyverse. It provides tools for dealing with **cat**egorical variables (and it's an anagram of factors!) using a wide range of helpers for working with factors. 
+<!--### Prerequisites-->
+### Dich tieu de o tren
+
+<!--To work with factors, we'll use the __forcats__ package, which is part of the core tidyverse. It provides tools for dealing with **cat**egorical variables (and it's an anagram of factors!) using a wide range of helpers for working with factors. -->
+
+* dich doan o tren
 
 ```{r setup, message = FALSE}
 library(tidyverse)
 ```
 
-### Learning more
+<!--### Learning more-->
+### Dich tieu de
 
-If you want to learn more about factors, I recommend reading Amelia McNamara and Nicholas Horton’s paper, [_Wrangling categorical data in R_](https://peerj.com/preprints/3163/). This paper lays out some of the history discussed in [_stringsAsFactors: An unauthorized biography_](http://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/) and [_stringsAsFactors = \<sigh\>_](http://notstatschat.tumblr.com/post/124987394001/stringsasfactors-sigh), and compares the tidy approaches to categorical data outlined in this book with base R methods. An early version of the paper help motivate and scope the forcats package; thanks Amelia & Nick!
+<!--If you want to learn more about factors, I recommend reading Amelia McNamara and Nicholas Horton’s paper, [_Wrangling categorical data in R_](https://peerj.com/preprints/3163/). This paper lays out some of the history discussed in [_stringsAsFactors: An unauthorized biography_](http://simplystatistics.org/2015/07/24/stringsasfactors-an-unauthorized-biography/) and [_stringsAsFactors = \<sigh\>_](http://notstatschat.tumblr.com/post/124987394001/stringsasfactors-sigh), and compares the tidy approaches to categorical data outlined in this book with base R methods. An early version of the paper help motivate and scope the forcats package; thanks Amelia & Nick!-->
+* Dich doan o tren
 
-## Creating factors
 
-Imagine that you have a variable that records month:
+<!--## Creating factors-->
+## Dich tieu de tren
+
+<!--Imagine that you have a variable that records month:-->
+* Dich cau van tren
 
 ```{r}
 x1 <- c("Dec", "Apr", "Jan", "Mar")
 ```
-
+<!--
 Using a string to record this variable has two problems:
 
 1.  There are only twelve possible months, and there's nothing saving you
@@ -51,7 +61,10 @@ month_levels <- c(
   "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 )
 ```
+-->
+* Dich doan van tren
 
+<!--
 Now you can create a factor:
 
 ```{r}
@@ -78,7 +91,9 @@ If you omit the levels, they'll be taken from the data in alphabetical order:
 ```{r}
 factor(x1)
 ```
-
+-->
+* Dich doan van tren
+<!--
 Sometimes you'd prefer that the order of the levels match the order of the first appearance in the data. You can do that when creating the factor by setting levels to `unique(x)`, or after the fact, with `fct_inorder()`:
 
 ```{r}
@@ -94,6 +109,8 @@ If you ever need to access the set of valid levels directly, you can do so with 
 ```{r}
 levels(f2)
 ```
+-->
+* Dich doan van tren
 
 ## General Social Survey
 
